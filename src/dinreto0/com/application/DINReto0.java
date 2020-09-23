@@ -6,7 +6,9 @@
 package dinreto0.com.application;
 
 /**
- *
+ * Crear un modelo y definirlo
+ * Metodo getView
+ * Metodo getModel
  * @author 2dam
  */
 public class DINReto0 {

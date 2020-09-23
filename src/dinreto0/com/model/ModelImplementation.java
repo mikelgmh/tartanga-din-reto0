@@ -6,15 +6,9 @@
 package dinreto0.com.model;
 
 /**
- * Contiene los metodos de modelo para uso en el controlador
- * @author Mikel/Imanol
+ *
+ * @author 2dam
  */
-public interface Model {
-    /**
-     * Metodo para obtener saludo
-     * @return 
-     */
-    
-    public String getGreeting();
+public class ModelImplementation {
     
 }
