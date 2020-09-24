@@ -9,6 +9,15 @@ package dinreto0.com.model;
  *
  * @author 2dam
  */
-public class ModelImplementation {
+public class ModelImplementation implements Model {
+
+    /**
+     * Obtiene el saludo.
+     *  
+     */
+    @Override
+    public String getGreeting() {
+      return null;
+    }
     
 }
