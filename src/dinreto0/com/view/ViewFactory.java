@@ -3,13 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dinreto0.com.control;
+package dinreto0.com.view;
 
 /**
- * Metodo run que envie una vista y un modelo
  *
- * @author 2dam
+ * @author Mikel
  */
-public class Control {
+public class ViewFactory {
 
+    public View getView() {
+        return new ViewImplementation();
+    }
 }

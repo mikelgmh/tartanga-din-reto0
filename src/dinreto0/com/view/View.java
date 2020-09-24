@@ -7,13 +7,16 @@ package dinreto0.com.view;
 
 /**
  * Contiene los metodos de vista para usarlo en el controlador.
+ *
  * @author Mikel/Imanol
  */
 public interface View {
+
     /**
      * Metodo para mostrar saludo
-     * @param greeting 
+     *
+     * @param greeting
      */
     public void showGreeting(String greeting);
-    
+
 }

@@ -13,11 +13,11 @@ public class ModelImplementation implements Model {
 
     /**
      * Obtiene el saludo.
-     *  
+     *
      */
     @Override
     public String getGreeting() {
-      return null;
+        return null;
     }
-    
+
 }

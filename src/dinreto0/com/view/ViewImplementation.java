@@ -7,18 +7,19 @@ package dinreto0.com.view;
 
 /**
  * Contiene metodos para mostrar una vista en modo texto y otra en GUI
+ *
  * @author Mikel/Imanol
  */
-public class ViewImplementation implements View{
-    
+public class ViewImplementation implements View {
+
     /**
      * Metodo para mostrar saludo
-     * @param greeting 
+     *
+     * @param greeting
      */
     @Override
-    public void showGreeting(String greeting){
+    public void showGreeting(String greeting) {
         System.out.println(greeting);
     }
-    
-    
+
 }
