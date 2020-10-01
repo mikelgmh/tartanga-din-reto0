@@ -5,19 +5,23 @@
  */
 package dinreto0.com.model;
 
+import java.util.ResourceBundle;
+
 /**
- *
- * @author 2dam
+ * Obtener saludo desde el archivo de configuración
+ * 
+ * @author Mikel/Imanol
  */
 public class ModelImplementation implements Model {
 
-    /**
-     * Obtiene el saludo.
-     *
-     */
+    private ResourceBundle rb = ResourceBundle.getBundle("config.config");
+    String greeting=null;
+    
+    
     @Override
     public String getGreeting() {
-        return "greeting";
+        greeting=rb.getString("greeting");
+        return greeting;
     }
 
 
