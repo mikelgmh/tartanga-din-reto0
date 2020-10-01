@@ -6,11 +6,13 @@
 package dinreto0.com.model;
 
 /**
- *
- * @author Usuario
+ *  
+ * 
+ * @author Mikel/Imanol
  */
 public class ModelFactory {
     
+    //Falta el mismo supuesto que en la factoria de la Vista. Hay que añadir el ModelImplementation
     public Model getModel() {
         return new MySQLModelImplementation();
     }
