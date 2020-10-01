@@ -11,7 +11,16 @@ package dinreto0.com.view;
  */
 public class ViewFactory {
 
+    /*Mikel, este metodo hay que parametrizarlo. He puesto i=2 por poner un ejemplo, pero aqui tiene que ir el argumento que le vamos a mandar nosotros.
+    Javi ha comentado que este metodo, puede recibir el parametro desde el main o desde el propio archivo de configuración.*/
+    int i=2;
     public View getView() {
-        return new ViewImplementation();
+        if(i==1){
+            return new GUIViewImplementation();
+        }else{
+            return new ViewImplementation();
+        }
+            
+            
     }
 }
