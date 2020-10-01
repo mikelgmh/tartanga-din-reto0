@@ -18,7 +18,8 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author 2dam
+ * 
+ * @author Mikel/Imanol
  */
 public class MySQLModelImplementation implements Model {
     
@@ -30,6 +31,8 @@ public class MySQLModelImplementation implements Model {
         this.openConnection();
     }
      
+    /*Mikel, podrias cambiar el metodo de conexion a preparedStatement? Aunque el programa funcione,
+    sale un error que creo que es debido a esto.*/
     private void openConnection() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
