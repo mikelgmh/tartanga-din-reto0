@@ -11,7 +11,17 @@ package dinreto0.com.view;
  */
 public class ViewFactory {
 
-    public View getView() {
-        return new ViewImplementation();
+    public View getView(String viewType) {
+        View view = null;
+        switch (viewType) {
+            case "console":
+                view = new ViewImplementation();
+                break;
+            case "gui":
+                view = new GUIViewImplementation();
+                break;
+        }
+        return view;
+
     }
 }
