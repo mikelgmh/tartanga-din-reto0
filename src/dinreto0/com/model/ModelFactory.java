@@ -6,17 +6,25 @@
 package dinreto0.com.model;
 
 /**
- *  
- * 
+ *
+ *
  * @author Mikel/Imanol
  */
 public class ModelFactory {
-    
+
     //Falta el mismo supuesto que en la factoria de la Vista. Hay que añadir el ModelImplementation
-    public Model getModel() {
-        return new MySQLModelImplementation();
+    public Model getModel(String modelType) {
+        Model model = null;
+        switch (modelType) {
+            case "db":
+                    model = new MySQLModelImplementation();
+                break;
+            case "file":
+            model = new ModelImplementation();
+                break;
+        }
+        return model;
+    
     }
-    
-    
-    
+
 }

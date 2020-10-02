@@ -22,21 +22,27 @@ public class Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-        ViewFactory viewFactory = new ViewFactory();
-        View view = viewFactory.getView();
-        
-        ModelFactory modelFactory = new ModelFactory();
-        Model model = modelFactory.getModel();
-        
-        Controller controller = new Controller(model, view);
-        controller.run();
-        
-        
-        
-        
-        
-        
+        if (checkParameters(args)) {
+
+            ViewFactory viewFactory = new ViewFactory();
+            View view = viewFactory.getView(args[1]);
+
+            ModelFactory modelFactory = new ModelFactory();
+            Model model = modelFactory.getModel(args[0]);
+
+            Controller controller = new Controller(model, view);
+            controller.run();
+        }else{
+            System.out.println("Parámetros incorrectos.");
+        }
+    }
+
+    public static boolean checkParameters(String[] args) {
+        boolean parameters = true;
+        if ((!"db".equals(args[0]) && !"file".equals(args[0])) || (!"console".equals(args[1]) && !"gui".equals(args[1]))) {
+            parameters = false;
+        }
+        return parameters;
     }
 
 }
