@@ -5,6 +5,8 @@
  */
 package dinreto0.com.model;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -17,15 +19,9 @@ import static org.junit.Assert.*;
  */
 public class ModelTest {
 
+    ModelFactory modelFactory = new ModelFactory();
+
     public ModelTest() {
-    }
-
-    @Before
-    public void setUp() {
-    }
-
-    @After
-    public void tearDown() {
     }
 
     /**
@@ -33,23 +29,14 @@ public class ModelTest {
      */
     @Test
     public void fileGreetingTest() {
-        ModelFactory modelFactory = new ModelFactory();
-        Model model = modelFactory.getModel("file");
-        
-        assertEquals("HOLA MUNDO",  model.getGreeting());
-        
+        Model model = this.modelFactory.getModel("file");
+        assertEquals("HOLA MUNDO", model.getGreeting());
     }
-    
-     @Test
+
+    @Test
     public void dbGreetingTest() {
-        ModelFactory modelFactory = new ModelFactory();
-        Model model = modelFactory.getModel("db");
-        
-        assertEquals("HOLA MUNDO",  model.getGreeting());
-        
+        Model model = this.modelFactory.getModel("db");
+        assertEquals("HOLA MUNDO", model.getGreeting());
     }
-    
-    
-    
 
 }
