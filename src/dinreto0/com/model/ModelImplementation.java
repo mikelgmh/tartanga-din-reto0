@@ -9,20 +9,16 @@ import java.util.ResourceBundle;
 
 /**
  * Obtener saludo desde el archivo de configuración
- * 
+ *
  * @author Mikel/Imanol
  */
 public class ModelImplementation implements Model {
 
     private ResourceBundle rb = ResourceBundle.getBundle("config.config");
-    String greeting=null;
-    
-    
+
     @Override
     public String getGreeting() {
-        greeting=rb.getString("greeting");
-        return greeting;
+        return rb.getString("greeting").trim();
     }
-
 
 }

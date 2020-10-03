@@ -18,19 +18,19 @@ import java.util.logging.Logger;
 
 /**
  *
- * 
+ *
  * @author Mikel/Imanol
  */
 public class MySQLModelImplementation implements Model {
-    
+
     private Connection con;
     private Statement stmt;
     private ResourceBundle rb = ResourceBundle.getBundle("config.config");
-    
+
     public MySQLModelImplementation() {
         this.openConnection();
     }
-     
+
     /*Mikel, podrias cambiar el metodo de conexion a preparedStatement? Aunque el programa funcione,
     sale un error que creo que es debido a esto.*/
     private void openConnection() {
@@ -49,42 +49,36 @@ public class MySQLModelImplementation implements Model {
         stmt.close();
         con.close();
     }
-    
+
     //Acceso a Base de Datos para obtención de saludo.
-    private String selectGreeting(){
-        String greeting=null;
-        
-        try{
-            String query="SELECT FRASE FROM SALUDO WHERE ID IN(SELECT ID FROM PAIS WHERE IDIOMA = 'CASTELLANO')";
-            
+    private String selectGreeting() {
+        String greeting = null;
+
+        try {
+            String query = "SELECT FRASE FROM SALUDO WHERE ID IN(SELECT ID FROM PAIS WHERE IDIOMA = 'CASTELLANO')";
+
             this.openConnection();
-        
+
             stmt = con.createStatement();
-            ResultSet rs=stmt.executeQuery(query);
-            while(rs.next()){
-            greeting=rs.getString("FRASE");           
+            ResultSet rs = stmt.executeQuery(query);
+            while (rs.next()) {
+                greeting = rs.getString("FRASE");
             }
-            
+
             rs.close();
-            
+
             this.closeConeection();
-            
-        }catch(SQLException e){
+
+        } catch (SQLException e) {
             System.out.println("Error en consulta.");
         }
-   
+
         return greeting;
     }
-    
-    
-    
+
     @Override
     public String getGreeting() {
         return this.selectGreeting();
     }
-    
-  
-    
-    
-    
+
 }
