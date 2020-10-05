@@ -8,7 +8,7 @@ import dinreto0.com.view.View;
 import dinreto0.com.view.ViewFactory;
 
 /**
- * Clase que contiene metodo main. Obtiene Vista y Modelo, crea clase 
+ * Contiene metodo main. Obtiene Vista y Modelo, crea clase 
  * controlador y lo ejecuta.
  * @author Mikel/Imanol
  */

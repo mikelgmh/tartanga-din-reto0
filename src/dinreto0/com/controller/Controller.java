@@ -4,9 +4,8 @@ import dinreto0.com.model.Model;
 import dinreto0.com.view.View;
 
 /**
- * Clase que contiene el metodo que muestra el saludo, obtenido previamente
+ * Contiene el metodo que muestra el saludo, obtenido previamente
  * en la clase aplicacion.
- *
  * @author Mikel/Imanol
  */
 public class Controller {
@@ -19,6 +18,9 @@ public class Controller {
         this.view=view;
     }
     
+    /**
+     * Ejecuta modelo y vista.
+     */
     public void run(){
        
         this.view.showGreeting(this.model.getGreeting());

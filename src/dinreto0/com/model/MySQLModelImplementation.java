@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package dinreto0.com.model;
 
 import java.sql.Connection;
@@ -17,8 +13,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
- *
+ * Accede a base de datos mediante conexión local y obtiene saludo.
  * @author Mikel/Imanol
  */
 public class MySQLModelImplementation implements Model {
@@ -31,8 +26,11 @@ public class MySQLModelImplementation implements Model {
         this.openConnection();
     }
 
-    /*Mikel, podrias cambiar el metodo de conexion a preparedStatement? Aunque el programa funcione,
-    sale un error que creo que es debido a esto.*/
+    /**
+     * Metodo para conectar con base de datos, obteniendo los parametros 
+     * necesarios desde el archivo de configuracion.
+     * @throws SQLException, ClassNotFoundException en caso de error al conectar.
+     */
     private void openConnection() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -45,12 +43,20 @@ public class MySQLModelImplementation implements Model {
         }
     }
 
+    /**
+     * Cierra conexion.
+     * @throws SQLException en caso de error al interactuar con base de datos.
+     */
     private void closeConeection() throws SQLException {
         stmt.close();
         con.close();
     }
 
-    //Acceso a Base de Datos para obtención de saludo.
+    /**
+     * Conecta a base de datos, realiza una query y devuelve String.
+     * @return greeting obtenido en base de datos.
+     * @throws SQLException en caso de error al interactuar con base de datos.
+     */
     private String selectGreeting() {
         String greeting = null;
 
@@ -76,6 +82,10 @@ public class MySQLModelImplementation implements Model {
         return greeting;
     }
 
+    /**
+     * Metodo que devuelve String a otras clases.
+     * @return String con saludo.
+     */
     @Override
     public String getGreeting() {
         return this.selectGreeting();

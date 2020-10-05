@@ -1,18 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package dinreto0.com.model;
 
 /**
- *
- *
+ * Hace de intermediario entre las clases Application y ambos Model 
+ * Implementation.
  * @author Mikel/Imanol
  */
 public class ModelFactory {
 
-    //Falta el mismo supuesto que en la factoria de la Vista. Hay que añadir el ModelImplementation
+    /**
+     * Obtiene un String desde la clase Application, el cual hace referencia al 
+     * modelo que se quiere obtener.
+     * @param modelType Contiene modelo, recibido desde la clase Application.
+     * @return modelo que se quiere usar.
+     */
     public Model getModel(String modelType) {
         Model model = null;
         switch (modelType) {
