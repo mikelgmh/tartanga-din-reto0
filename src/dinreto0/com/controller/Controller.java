@@ -1,17 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dinreto0.com.controller;
 
 import dinreto0.com.model.Model;
 import dinreto0.com.view.View;
 
 /**
- * Metodo run que envie una vista y un modelo
+ * Clase que contiene el metodo que muestra el saludo, obtenido previamente
+ * en la clase aplicacion.
  *
- * @author 2dam
+ * @author Mikel/Imanol
  */
 public class Controller {
     
