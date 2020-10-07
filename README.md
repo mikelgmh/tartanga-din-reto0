@@ -4,9 +4,9 @@ URL Repository (from GitHub): https://github.com/mikelgmh/tartanga-din-reto0.git
 - mysql-connector-java-5.1.49.jar
 
 ### Test Library: 
-- junit 4.12 - junit-4.12.jar
+- junit-4.12.jar
 - hamcrest-core-1.3.jar
-- hamcrest-library.1.3.jar
+- hamcrest-library-1.3.jar
 		
 
 ## INSTRUCTIONS
