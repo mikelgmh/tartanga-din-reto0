@@ -1,5 +1,3 @@
-URL Repository (from GitHub): https://github.com/mikelgmh/tartanga-din-reto0.git
-
 ### Library: 
 - mysql-connector-java-5.1.49.jar
 
